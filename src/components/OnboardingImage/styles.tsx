@@ -7,6 +7,7 @@ export const Container = styled.View`
   justify-content: space-between;
   width: 100%;
   padding: 0 20px 0 10px;
+  margin-bottom: 30px;
 `;
 
 export const Title = styled.Text`
