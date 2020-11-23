@@ -1,14 +1,18 @@
 import React from 'react';
-import { Image, Text, View } from 'react-native';
-import Calendario from '../../assets/calendario.png';
+import { Image, ImageSourcePropType } from 'react-native';
 
 import { Container, Title } from './styles';
 
-const OnboardingImage: React.FC = () => {
+interface OnboardingProps {
+  title: string;
+  image: ImageSourcePropType;
+}
+
+const OnboardingImage: React.FC<OnboardingProps> = ({ title, image }) => {
   return (
     <Container>
-      <Image source={Calendario} />
-      <Title>01</Title>
+      <Image source={image} />
+      <Title>{title}</Title>
     </Container>
   );
 };
