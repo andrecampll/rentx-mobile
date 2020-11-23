@@ -1,8 +1,8 @@
 import React from 'react';
 import { Image } from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
-import Calendario from '../../assets/calendario.png';
 import Carro from '../../assets/carro.png';
+import OnboardingImage from '../../components/OnboardingImage';
 
 const MobileOnboarding: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const MobileOnboarding: React.FC = () => {
       pages={[
         {
           backgroundColor: '#fff',
-          image: <Image source={Calendario} />,
+          image: <OnboardingImage />,
           title: `Primeiro,\nescolha \na data`,
           subtitle:
             'Você é quem define um\nperíodo, e nós mostraremos\nos carros disponíveis.',
@@ -41,10 +41,6 @@ const MobileOnboarding: React.FC = () => {
         fontSize: 15,
         lineHeight: 25,
         color: '#7A7A80',
-      }}
-      imageContainerStyles={{
-        alignItems: 'flex-start',
-        paddingLeft: 10,
       }}
     />
   );
