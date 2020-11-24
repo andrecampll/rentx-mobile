@@ -1,11 +1,14 @@
 import React from 'react';
 import Onboarding from 'react-native-onboarding-swiper';
 import Icon from 'react-native-vector-icons/Feather';
+import { useNavigation } from '@react-navigation/native';
 import Carro from '../../assets/carro.png';
 import Calendario from '../../assets/calendario.png';
 import OnboardingImage from '../../components/OnboardingImage';
 
 const MobileOnboarding: React.FC = () => {
+  const navigation = useNavigation();
+
   return (
     <Onboarding
       pages={[
@@ -46,6 +49,7 @@ const MobileOnboarding: React.FC = () => {
       nextLabel={<Icon name="chevron-right" size={25} color="#AEAEB3" />}
       bottomBarHighlight={false}
       showSkip={false}
+      onDone={() => navigation.navigate('Home')}
     />
   );
 };

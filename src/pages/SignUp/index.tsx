@@ -1,10 +1,10 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Text } from 'react-native';
 
 // import { Container } from './styles';
 
 const SignUp: React.FC = () => {
-  return <View />;
+  return <Text>Cadastro</Text>;
 };
 
 export default SignUp;
