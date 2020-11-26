@@ -46,7 +46,8 @@
     "prettier/prettier": "error",
     "react/prop-types": "off",
     "no-nested-ternary": "off",
-    "react/jsx-curly-newline": "off"
+    "react/jsx-curly-newline": "off",
+    "react/jsx-props-no-spreading": "off"
   },
   "settings": {
     "import/resolver": {
