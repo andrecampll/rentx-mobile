@@ -21,3 +21,7 @@ export const SubTitle = styled.Text`
   color: #7a7a80;
   margin-top: 7%;
 `;
+
+export const FormView = styled.View`
+  margin-top: 110px;
+`;
