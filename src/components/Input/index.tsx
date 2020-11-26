@@ -1,10 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
-
-// import { Container } from './styles';
+import { Container, TextInput } from './styles';
 
 const Input: React.FC = () => {
-  return <View />;
+  return (
+    <Container>
+      <TextInput />
+    </Container>
+  );
 };
 
 export default Input;

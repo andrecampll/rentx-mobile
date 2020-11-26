@@ -1,4 +1,5 @@
 import React from 'react';
+import Input from '../../components/Input';
 
 import { Container, Title, SubTitle } from './styles';
 
@@ -15,6 +16,7 @@ const SignIn: React.FC = () => {
         {'\n'}
         uma experiência incrível
       </SubTitle>
+      <Input />
     </Container>
   );
 };
