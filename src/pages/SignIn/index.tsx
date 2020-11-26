@@ -32,7 +32,12 @@ const SignIn: React.FC = () => {
         <Input name="password" placeholder="Senha" icon="lock" />
         <AuthOptionsView>
           <RememberView>
-            <CheckBox boxType="square" lineWidth={1} />
+            <CheckBox
+              boxType="square"
+              lineWidth={1}
+              onCheckColor="#000"
+              onTintColor="#000"
+            />
             <AuthOptionsText>Lembrar-me</AuthOptionsText>
           </RememberView>
 

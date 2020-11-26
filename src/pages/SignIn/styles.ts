@@ -5,8 +5,6 @@ export const Container = styled.View`
   padding: 32px;
 `;
 
-export const Header = styled.View``;
-
 export const Title = styled.Text`
   font-family: 'Archivo-Semibold';
   font-size: 40px;
@@ -32,7 +30,6 @@ export const AuthOptionsView = styled.View`
   align-items: center;
   justify-content: space-between;
   margin-top: 7%;
-  margin-bottom: 9%;
 `;
 
 export const AuthOptionsText = styled.Text`
