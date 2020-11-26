@@ -2,7 +2,16 @@ import React from 'react';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 
-import { Container, Title, SubTitle, FormView } from './styles';
+import {
+  Container,
+  Title,
+  SubTitle,
+  FormView,
+  AuthOptionsView,
+  AuthOptionsText,
+  RememberView,
+  CheckBox,
+} from './styles';
 
 const SignIn: React.FC = () => {
   return (
@@ -21,6 +30,14 @@ const SignIn: React.FC = () => {
       <FormView>
         <Input name="email" placeholder="E-mail" icon="mail" />
         <Input name="password" placeholder="Senha" icon="lock" />
+        <AuthOptionsView>
+          <RememberView>
+            <CheckBox boxType="square" lineWidth={1} />
+            <AuthOptionsText>Lembrar-me</AuthOptionsText>
+          </RememberView>
+
+          <AuthOptionsText>Esqueci minha senha</AuthOptionsText>
+        </AuthOptionsView>
         <Button>Entrar</Button>
       </FormView>
     </Container>
