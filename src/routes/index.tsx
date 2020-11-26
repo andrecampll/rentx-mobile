@@ -1,28 +1,23 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import SignIn from '../pages/SignIn';
-import SignUp from '../pages/SignUp';
 import Onboarding from '../pages/Onboarding';
 import Home from '../pages/Home';
+import AuthRoutes from './AuthRoutes';
 
-const Auth = createStackNavigator();
+const Stack = createStackNavigator();
 
-const AuthRoutes: React.FC = () => {
+const Routes: React.FC = () => {
   return (
-    <Auth.Navigator
+    <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        cardStyle: {
-          backgroundColor: '#fff',
-        },
       }}
     >
-      <Auth.Screen name="Onboarding" component={Onboarding} />
-      <Auth.Screen name="Home" component={Home} />
-      <Auth.Screen name="SignIn" component={SignIn} />
-      <Auth.Screen name="SignUp" component={SignUp} />
-    </Auth.Navigator>
+      <Stack.Screen name="Onboarding" component={Onboarding} />
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="AuthRoutes" component={AuthRoutes} />
+    </Stack.Navigator>
   );
 };
 
-export default AuthRoutes;
+export default Routes;

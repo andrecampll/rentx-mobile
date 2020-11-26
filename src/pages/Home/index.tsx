@@ -34,13 +34,17 @@ const Home: React.FC = () => {
         <EnterView>
           <ActionButton
             buttonType="login"
-            onPress={() => navigation.navigate('SignIn')}
+            onPress={() =>
+              navigation.navigate('AuthRoutes', { screen: 'SignIn' })
+            }
           >
             <ActionsText>Login</ActionsText>
           </ActionButton>
           <ActionButton
             buttonType="register"
-            onPress={() => navigation.navigate('SignUp')}
+            onPress={() =>
+              navigation.navigate('AuthRoutes', { screen: 'SignUp' })
+            }
           >
             <ActionsText>Cadastro</ActionsText>
           </ActionButton>

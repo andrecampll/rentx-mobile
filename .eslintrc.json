@@ -45,7 +45,8 @@
     "no-use-before-define": "off",
     "prettier/prettier": "error",
     "react/prop-types": "off",
-    "no-nested-ternary": "off"
+    "no-nested-ternary": "off",
+    "react/jsx-curly-newline": "off"
   },
   "settings": {
     "import/resolver": {
