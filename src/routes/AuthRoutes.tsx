@@ -17,8 +17,9 @@ const AuthRoutes: React.FC = () => {
         headerTransparent: true,
         headerBackTitleVisible: false,
         headerBackImage: () => (
-          <Icon name="chevron-left" color="#fff" size={30} />
+          <Icon name="chevron-left" color="#AEAEB3" size={30} />
         ),
+        headerTitle: '',
       }}
     >
       <Auth.Screen name="SignIn" component={SignIn} />
