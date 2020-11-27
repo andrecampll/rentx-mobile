@@ -1,20 +1,13 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 
-import {
-  Container,
-  Title,
-  SubTitle,
-  FormView,
-  AuthOptionsView,
-  AuthOptionsText,
-  RememberView,
-  CheckBox,
-  FormViewTitle,
-} from './styles';
+import { Container, Title, SubTitle, FormView, FormViewTitle } from './styles';
 
 const SignUp: React.FC = () => {
+  const navigation = useNavigation();
+
   return (
     <Container>
       <Title>
@@ -29,10 +22,16 @@ const SignUp: React.FC = () => {
       </SubTitle>
 
       <FormView>
-        <FormViewTitle>1. Dados</FormViewTitle>
+        <FormViewTitle>01. Dados</FormViewTitle>
         <Input name="email" placeholder="Nome" icon="user" />
         <Input name="password" placeholder="E-mail" icon="mail" />
-        <Button>Próximo</Button>
+        <Button
+          onPress={() =>
+            navigation.navigate('SuccessPage', { CreateAccount: true })
+          }
+        >
+          Próximo
+        </Button>
       </FormView>
     </Container>
   );
