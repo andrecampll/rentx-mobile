@@ -43,7 +43,7 @@ const SignIn: React.FC = () => {
 
           <AuthOptionsText>Esqueci minha senha</AuthOptionsText>
         </AuthOptionsView>
-        <Button>Entrar</Button>
+        <Button background="#dc1637">Entrar</Button>
       </FormView>
     </Container>
   );

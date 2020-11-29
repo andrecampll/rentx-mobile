@@ -26,6 +26,7 @@ const SignUpSecondStep: React.FC = () => {
         <Input name="password" placeholder="Senha" icon="lock" />
         <Input name="password" placeholder="Repetir Senha" icon="lock" />
         <Button
+          background="#dc1637"
           onPress={() =>
             navigation.navigate('SuccessPage', { CreateAccount: true })
           }

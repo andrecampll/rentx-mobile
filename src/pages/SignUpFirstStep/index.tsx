@@ -25,7 +25,10 @@ const SignUpFirstStep: React.FC = () => {
         <FormViewTitle>01. Dados</FormViewTitle>
         <Input name="email" placeholder="Nome" icon="user" />
         <Input name="password" placeholder="E-mail" icon="mail" />
-        <Button onPress={() => navigation.navigate('SignUpSecondStep')}>
+        <Button
+          background="#dc1637"
+          onPress={() => navigation.navigate('SignUpSecondStep')}
+        >
           Próximo
         </Button>
       </FormView>

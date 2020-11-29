@@ -47,7 +47,7 @@ export const ActionsView = styled.View`
 export const EnterView = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 43px;
+  /* margin-bottom: 43px; */
 `;
 
 export const ActionButton = styled(RectButton)<ActionButtonProps>`

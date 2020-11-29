@@ -1,10 +1,15 @@
 import { RectButton } from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
 
-export const Container = styled(RectButton)`
-  width: 100%;
+interface ButtonProps {
+  background: string;
+}
+
+export const Container = styled(RectButton)<ButtonProps>`
+  max-width: 100%;
+  min-width: 156px;
   height: 56px;
-  background: #dc1637;
+  background: ${props => props.background};
   align-items: center;
   justify-content: center;
   margin-top: 9%;

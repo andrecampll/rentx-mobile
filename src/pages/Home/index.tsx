@@ -2,6 +2,8 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import Union from '../../assets/Union.png';
 
+import Button from '../../components/Button';
+
 import {
   Container,
   Title,
@@ -32,26 +34,26 @@ const Home: React.FC = () => {
 
       <ActionsView>
         <EnterView>
-          <ActionButton
-            buttonType="login"
+          <Button
+            background="#dc1637"
             onPress={() =>
               navigation.navigate('AuthRoutes', { screen: 'SignIn' })
             }
           >
-            <ActionsText>Login</ActionsText>
-          </ActionButton>
-          <ActionButton
-            buttonType="register"
+            Login
+          </Button>
+          <Button
+            background="#29292E"
             onPress={() =>
               navigation.navigate('AuthRoutes', { screen: 'SignUpRoutes' })
             }
           >
-            <ActionsText>Cadastro</ActionsText>
-          </ActionButton>
+            Cadastro
+          </Button>
         </EnterView>
-        <ActionButton buttonType="back" onPress={() => navigation.goBack()}>
-          <ActionsText>Voltar</ActionsText>
-        </ActionButton>
+        <Button background="transparent" onPress={() => navigation.goBack()}>
+          Voltar
+        </Button>
       </ActionsView>
     </Container>
   );
