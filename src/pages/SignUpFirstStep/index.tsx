@@ -5,7 +5,7 @@ import Input from '../../components/Input';
 
 import { Container, Title, SubTitle, FormView, FormViewTitle } from './styles';
 
-const SignUp: React.FC = () => {
+const SignUpFirstStep: React.FC = () => {
   const navigation = useNavigation();
 
   return (
@@ -25,11 +25,7 @@ const SignUp: React.FC = () => {
         <FormViewTitle>01. Dados</FormViewTitle>
         <Input name="email" placeholder="Nome" icon="user" />
         <Input name="password" placeholder="E-mail" icon="mail" />
-        <Button
-          onPress={() =>
-            navigation.navigate('SuccessPage', { CreateAccount: true })
-          }
-        >
+        <Button onPress={() => navigation.navigate('SignUpSecondStep')}>
           Próximo
         </Button>
       </FormView>
@@ -37,4 +33,4 @@ const SignUp: React.FC = () => {
   );
 };
 
-export default SignUp;
+export default SignUpFirstStep;

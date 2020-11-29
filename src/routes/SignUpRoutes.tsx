@@ -1,8 +1,8 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Feather';
-import SignIn from '../pages/SignIn';
-import SignUpRoutes from './SignUpRoutes';
+import SignUpFirstStep from '../pages/SignUpFirstStep';
+import SignUpSecondStep from '../pages/SignUpSecondStep';
 
 const Auth = createStackNavigator();
 
@@ -29,8 +29,8 @@ const AuthRoutes: React.FC = () => {
         headerTitle: '',
       }}
     >
-      <Auth.Screen name="SignIn" component={SignIn} />
-      <Auth.Screen name="SignUpRoutes" component={SignUpRoutes} />
+      <Auth.Screen name="SignUpFirstStep" component={SignUpFirstStep} />
+      <Auth.Screen name="SignUpSecondStep" component={SignUpSecondStep} />
     </Auth.Navigator>
   );
 };

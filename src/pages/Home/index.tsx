@@ -43,7 +43,7 @@ const Home: React.FC = () => {
           <ActionButton
             buttonType="register"
             onPress={() =>
-              navigation.navigate('AuthRoutes', { screen: 'SignUp' })
+              navigation.navigate('AuthRoutes', { screen: 'SignUpRoutes' })
             }
           >
             <ActionsText>Cadastro</ActionsText>
