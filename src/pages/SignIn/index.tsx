@@ -1,6 +1,7 @@
 import React, { useCallback, useRef } from 'react';
 import { Form } from '@unform/mobile';
 import { FormHandles } from '@unform/core';
+import { useLoginMutation } from '../../generated/graphql';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 
@@ -16,11 +17,19 @@ import {
 } from './styles';
 
 const SignIn: React.FC = () => {
+  const [, login] = useLoginMutation();
+
   const formRef = useRef<FormHandles>(null);
 
-  const handleSignIn = useCallback((data: any) => {
-    console.log(data);
-  }, []);
+  const handleSignIn = useCallback(
+    async (data: any) => {
+      console.log(data);
+      const response = await login(data);
+
+      console.log(response.data);
+    },
+    [login],
+  );
 
   return (
     <Container>
