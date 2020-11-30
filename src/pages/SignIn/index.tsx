@@ -1,6 +1,8 @@
 import React, { useCallback, useRef } from 'react';
 import { Form } from '@unform/mobile';
 import { FormHandles } from '@unform/core';
+import * as Yup from 'yup';
+import { Alert } from 'react-native';
 import { useLoginMutation } from '../../generated/graphql';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
@@ -16,17 +18,42 @@ import {
   CheckBox,
 } from './styles';
 
+interface SignInFormData {
+  email: string;
+  password: string;
+}
+
 const SignIn: React.FC = () => {
   const [, login] = useLoginMutation();
 
   const formRef = useRef<FormHandles>(null);
 
   const handleSignIn = useCallback(
-    async (data: any) => {
-      console.log(data);
-      const response = await login(data);
+    async (formData: SignInFormData) => {
+      try {
+        const schema = Yup.object().shape({
+          email: Yup.string()
+            .required('E-mail é obrigatório')
+            .email('Digite um e-mail válido'),
+          password: Yup.string().required('Senha é obrigatória'),
+        });
 
-      console.log(response.data);
+        await schema.validate(formData, { abortEarly: false });
+
+        const { data } = await login(formData);
+
+        if (data) {
+          const { user, token, errors } = data.login;
+
+          if (errors?.length) {
+            throw new Error(errors[0].message);
+          }
+        } else {
+          throw new Error();
+        }
+      } catch (err) {
+        Alert.alert('Erro na autenticação', err.message);
+      }
     },
     [login],
   );
