@@ -48,7 +48,8 @@
     "no-nested-ternary": "off",
     "react/jsx-curly-newline": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "camelcase": "off"
   },
   "settings": {
     "import/resolver": {
